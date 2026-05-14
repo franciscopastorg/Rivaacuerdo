@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acuerdo Comercial de Administración</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section id="formScreen" class="panel" aria-labelledby="formTitle">
+        <div class="panel-header">
+          <p class="eyebrow">Riva Living / Playa Serena</p>
+          <h1 id="formTitle">Acuerdo Comercial de Administración</h1>
+          <p class="subtitle">Completa tus datos para generar el acuerdo comercial correspondiente a tu departamento en Edificio Playa Serena.</p>
+        </div>
+
+        <form id="agreementForm" class="form-grid" novalidate>
+          <div class="field full-width">
+            <label for="fullName">Nombre completo del compareciente / Mandante</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="rut">Cédula de identidad / RUT</label>
+            <input id="rut" name="rut" type="text" autocomplete="off" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" inputmode="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+
+          <div class="field">
+            <label for="street">Domicilio: calle</label>
+            <input id="street" name="street" type="text" autocomplete="address-line1" required>
+          </div>
+
+          <div class="field">
+            <label for="streetNumber">Número de domicilio</label>
+            <input id="streetNumber" name="streetNumber" type="text" autocomplete="address-line2" required>
+          </div>
+
+          <div class="field">
+            <label for="homeApartment">Departamento de domicilio, si aplica</label>
+            <input id="homeApartment" name="homeApartment" type="text" autocomplete="address-line3">
+          </div>
+
+          <div class="field">
+            <label for="commune">Comuna</label>
+            <input id="commune" name="commune" type="text" autocomplete="address-level3" required>
+          </div>
+
+          <div class="field">
+            <label for="region">Región</label>
+            <input id="region" name="region" type="text" autocomplete="address-level1" required>
+          </div>
+
+          <div class="field">
+            <label for="playaSerenaApartment">Número de departamento en Edificio Playa Serena</label>
+            <input id="playaSerenaApartment" name="playaSerenaApartment" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="parking">Número de estacionamiento(s), si aplica</label>
+            <input id="parking" name="parking" type="text">
+          </div>
+
+          <div id="formError" class="message error-message full-width" role="alert" aria-live="polite"></div>
+
+          <div class="actions full-width">
+            <button type="submit" class="button primary-button">Generar acuerdo</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="reviewScreen" class="panel wide-panel hidden" aria-labelledby="reviewTitle">
+        <div class="panel-header">
+          <p class="eyebrow">Documento generado</p>
+          <h1 id="reviewTitle">Revisión del Acuerdo Comercial</h1>
+          <p class="subtitle">Por favor revisa cuidadosamente el acuerdo generado con tus datos. Al hacer clic en 'Acepto', registrarás tu aceptación digital del documento.</p>
+        </div>
+
+        <article id="agreementPreview" class="document-box" aria-label="Acuerdo comercial generado"></article>
+
+        <p class="declaration">Declaro haber leído íntegramente el Acuerdo Comercial de Administración Comercial generado con mis datos y entiendo que, al presionar el botón 'Acepto', registro mi aceptación digital del presente documento.</p>
+
+        <div id="submitStatus" class="message status-message" role="status" aria-live="polite"></div>
+
+        <div class="review-actions">
+          <button id="acceptButton" type="button" class="button primary-button">Acepto</button>
+          <button id="rejectButton" type="button" class="button secondary-button">No acepto</button>
+          <button id="editButton" type="button" class="text-button">Volver a editar datos</button>
+        </div>
+      </section>
+
+      <section id="confirmationScreen" class="panel confirmation-panel hidden" aria-labelledby="confirmationTitle">
+        <div class="confirmation-icon" aria-hidden="true">✓</div>
+        <h1 id="confirmationTitle">Registro completado</h1>
+        <p id="confirmationMessage" class="subtitle"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
